@@ -1,0 +1,53 @@
+{
+  "name": "Berbagi Cerita",
+  "short_name": "Cerita",
+  "description": "Aplikasi untuk berbagi cerita dengan mode offline dan installable.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "orientation": "portrait",
+  "id": "./index.html",
+  "icons": [
+    {
+      "src": "public/images/favicon.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    },
+    {
+      "src": "public/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "public/images/screenshot1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "Tampilan utama aplikasi"
+    },
+    {
+      "src": "public/images/screenshot2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "Halaman detail cerita"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Buka Cerita Terbaru",
+      "short_name": "Terbaru",
+      "description": "Lihat cerita terbaru dari pengguna lain.",
+      "url": "index.html#latest",
+      "icons": [{ "src": "public/images/favicon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tulis Cerita Baru",
+      "short_name": "Tulis",
+      "description": "Tambahkan cerita baru kamu.",
+      "url": "index.html#add",
+      "icons": [{ "src": "public/images/logo.png", "sizes": "96x96" }]
+    }
+  ]
+}
