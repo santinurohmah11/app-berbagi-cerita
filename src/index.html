@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berbagi Cerita</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="public/images/favicon.png" type="image/png" />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#4a90e2" />
+
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body>
+    <!-- ♿ Skip link -->
+    <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+
+    <!-- HEADER -->
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <button
+            id="drawer-button"
+            class="drawer-button"
+            aria-label="Buka menu navigasi"
+          >
+            ☰
+          </button>
+          <a class="brand-name" href="#/"><span>Berbagi Cerita</span></a>
+        </div>
+
+        <!-- Tombol notifikasi -->
+        <button id="notifButton" class="notif-btn">
+          🔔 Aktifkan Notifikasi
+        </button>
+      </div>
+
+      <!-- Navigasi -->
+      <nav id="navigation-drawer" class="navigation-drawer">
+        <ul class="nav-list">
+          <li><a href="#/" aria-current="page">Beranda</a></li>
+          <li><a href="#/add-story">Tambah Cerita</a></li>
+          <li><a href="#/about">Tentang</a></li>
+          <li><a href="#/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="main-content container" tabindex="-1">
+      <!-- Konten dinamis dimuat di sini -->
+    </main>
+
+    <!-- FITUR INDEXEDDB -->
+    <section id="offlineSection">
+      <h2>💾 Cerita Offline</h2>
+
+      <form id="offlineForm" class="offline-form">
+        <input
+          type="text"
+          id="offlineTitle"
+          placeholder="Judul cerita"
+          required
+        />
+        <textarea
+          id="offlineDesc"
+          placeholder="Isi cerita"
+          required
+        ></textarea>
+        <button type="submit">💾 Simpan Cerita</button>
+      </form>
+
+      <div id="reportList" class="offline-list">
+        <!-- Cerita offline dari IndexedDB akan muncul di sini -->
+      </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Berbagi Cerita — Santi Nurohmah</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+
+    <!-- Bundle dari Webpack -->
+    <script src="app.bundle.js"></script>
+  </body>
+</html>
